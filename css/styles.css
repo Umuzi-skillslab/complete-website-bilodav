@@ -1,0 +1,50 @@
+/* STYLESHEET FOR ALL PAGES */
+
+/* CSS ROOT PROPERTIES */
+
+:root {
+    --color-bg: #0f0e0d;
+    --color-surface: #1a1917;
+    --color-surface-alt: #242220;
+    --color-border: #2e2c29;
+    --color-text: #e8e4dc;
+    --color-text-dark: #9a9590;
+    --color-accent: #c9a84c;
+    --color-accent-dark: #a6873a;
+    --color-white: #f5f2eb;
+    --color-error: #d9534f;
+    --color-box-shadow: #010100;
+
+
+    --font-heading: Arial;
+    --font-body: sans-serif;
+    --font-mono: monospace;
+
+}
+
+/* CSS RESET & BASE STYLING */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+}
+
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}

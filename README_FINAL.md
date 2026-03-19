@@ -3,7 +3,11 @@
 
 # Portfolio Website Overview
 
-This website is a portfolio website template. The website showcases a home page where a short into is given. An about page where more in depth information is given about the person. A Projects Page that Showcases the different past projects of the person. Lastly a contact page that allows a user to contact the profile owner easily via a form or contact buttons. The website is optomized for all screen sizes and is fully responsive across multiple devices
+This is a four-page portfolio website template. The website showcases a home page where a short intro is given. An about page where more in depth information is given about the person. A Projects Page that Showcases the different past projects of the person. Lastly a contact page that allows a user to contact the profile owner easily via a form or contact buttons. The website is optomized for all screen sizes and is fully responsive across multiple devices.
+
+The project began from an incomplete, error-filled starter codebase and was rebuilt into a fully functional, accessible, responsive, and professionally styled website.
+
+**You can visit the Live URL here:** [https://bilodav.github.io/Oakbeam](httsp://bilodav.github.io/Oakbeam)
 
 ## What's Included
 
