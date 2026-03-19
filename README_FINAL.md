@@ -80,19 +80,3 @@ I added aria labels for when inputs are focused and I added aria-labels for all 
 ## Reflection
 
 I leaned so much from doing this. I learned how to get items to size correctly and also how to implement good use of aria-labels for accessibilty and also how to
-
-- You will need to add your own images to the `images/` folder
-- The starter code intentionally has issues for you to discover and fix
-- Refer to the project requirements document for all specifications
-
-Good luck!
-
-### This is some text
-
-#### NUmber 4 Heading
-
-##### Number 5
-
-###### Number 6
-
-## Its always underlined
