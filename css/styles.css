@@ -208,7 +208,13 @@ h1{
     margin: 10% auto;
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
+    transition: all 200ms ease-in-out;
 
+}
+
+.hero img:hover{
+    transform: rotate(10deg);
+    cursor: pointer;
 }
 
 
