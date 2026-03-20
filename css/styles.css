@@ -4,11 +4,15 @@ STYLESHEET FOR ALL PAGES
 ==========================
 */
 
+/*  FONT STYLING IMPORTS FROM GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 /* ----------------------CSS ROOT PROPERTIES -----------------------------------*/
 
 :root {
-    --color-bg: #0f0e0d;
+    --color-bg: #e2fefe;
     --color-bg-linear: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     --color-bg-linear2: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
     --color-bg-linear3: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
@@ -20,18 +24,19 @@ STYLESHEET FOR ALL PAGES
     --color-bg-linear9: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
     --color-bg-linear10: linear-gradient(to top, #dfe9f3 0%, white 100%);
 
-    --color-surface: #1a1917;
-    --color-surface-alt: #242220;
-    --color-border: #2e2c29;
-    --color-text: #e8e4dc;
-    --color-text-dark: #9a9590;
-    --color-accent: #c9a84c;
-    --color-accent-dark: #a6873a;
+    --color-surface: #defcfc;
+    --color-surface-alt: #79d1e2;
+    --color-border: #22455f;
+    --color-text: #16293D;
+    --color-text-light: #9a9590;
+    --color-accent: #4eb6af;
+    --color-accent-dark: #23646d;
     --color-white: #f5f2eb;
+    --color-alt: #ddbe7d;
     --color-error: #d9534f;
     --color-box-shadow: #010100;
 
-    --glass-bg: rgb(255,255,255 / 25%);
+    --glass-bg: rgb(255,255,255,0.25);
     --glass-bg-hover: rgba(36, 34, 32, 0.6);
     --glass-border: rgba(201, 168, 76, 0.15);
     --glass-border-hover: rgba(201,168, 76, 0.35);
@@ -40,8 +45,8 @@ STYLESHEET FOR ALL PAGES
     --glass-text-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 
 
-    --font-heading: Arial;
-    --font-body: sans-serif;
+    --font-heading: "Exo", sans-serif;
+    --font-body: "Inter", sans-serif;
     --font-mono: monospace;
 
 }
@@ -71,35 +76,37 @@ body{
 a{
     color: var(--color-text);
     text-decoration: none;
+    font-family: var(--font-body);
 }
+
+h1 {
+    font-family: var(--font-heading);
+}
+
+p {
+    font-family: var(--font-body);
+}
+
+
+
+
+
 
 .glass{
+    position: relative;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
+    border: 1px rgba(201, 168 , 76, 0.15);
+    box-shadow: 0 6px 6px rgb(0, 0 ,0 , 0.2), 0 0 20px rgba(0,0,0,0.1);
     text-shadow: var(--glass-text-shadow);
-
-  
 }
 
-
-
-.glass::before, .glass::after {
+.glass::after {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-}
-
-.glass::before{
-    backdrop-filter: blur(3px);
-    z-index: -1;
-}
-
-  .glass::after {
-    box-shadow: inset 2px 2px 1px 0 rgb(255 255 255 / 50%), inset -1px -1px 1px 1px rgb(255 255 255 / 50%);
+    box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255,0.5), inset -1px -1px 1px 1px rgb(255, 255, 255, 0.5);
   }
 
 
@@ -111,8 +118,7 @@ nav{
     top: 0;
     z-index: 100;
     height: 10vh;
-    background-color: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
+
     backdrop-filter: var(--glass-blur);
     display: flex;
     justify-content: flex-end;
@@ -131,40 +137,87 @@ nav ul{
 }
 
 nav ul a{
-    color: var(--color-white);
+    color: var(--color-accent-dark);
     border-radius: 15px;
     transition: all 250ms ease-in-out;
     padding: 10px 15px;
     letter-spacing: 0.04em;
+    font-family: var(--font-mono);
 }
 
 nav ul a:hover{
-    color: var(--color-accent);
+    color: var(--color-white);
     background-color: var(--color-surface-alt);
 
 }
 
 .active{
-    color: var(--color-accent-dark);
+    color: var(--color-accent);
 }
 
 h1{
-    font-family: var(--font-heading);
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 1vh;
     font-size: 8Vh;
 }
 
 /* ----------------------------------- INDEX HTML -------------------------------------------- */
 
 
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 65%;
+    margin: 0 auto;
+    height: 60vh;
+    border-radius: 30px;
+}
+
+
+.hero h2{
+    grid-column: 1/1;
+    grid-row: 2/3;
+    font-size: 3vw;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.hero p {
+    grid-column: 1/1;
+    grid-row: 3/4;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hero img {
+    grid-column: 2/2;
+    grid-row: 1/4;
+    min-width: 40%;
+    height: 100%;
+    margin: 10% auto;
+    border-radius: 30px;
+    box-shadow: var(--glass-shadow);
+
+}
 
 
 
 
 
+/* FOOTER STYLING ALL PAGES */
 
-
+.footer{
+    width: 100%;
+    height: 10vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
  /* Small devices (landscape phones, 576px and up) */
