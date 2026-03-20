@@ -1,9 +1,25 @@
-/* STYLESHEET FOR ALL PAGES */
+/* 
+==========================
+STYLESHEET FOR ALL PAGES 
+==========================
+*/
 
-/* CSS ROOT PROPERTIES */
+
+/* ----------------------CSS ROOT PROPERTIES -----------------------------------*/
 
 :root {
     --color-bg: #0f0e0d;
+    --color-bg-linear: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    --color-bg-linear2: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    --color-bg-linear3: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+    --color-bg-linear4: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+    --color-bg-linear5: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    --color-bg-linear6: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+    --color-bg-linear7: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+    --color-bg-linear8: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    --color-bg-linear9: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+    --color-bg-linear10: linear-gradient(to top, #dfe9f3 0%, white 100%);
+
     --color-surface: #1a1917;
     --color-surface-alt: #242220;
     --color-border: #2e2c29;
@@ -14,6 +30,14 @@
     --color-white: #f5f2eb;
     --color-error: #d9534f;
     --color-box-shadow: #010100;
+
+    --glass-bg: rgb(255,255,255 / 25%);
+    --glass-bg-hover: rgba(36, 34, 32, 0.6);
+    --glass-border: rgba(201, 168, 76, 0.15);
+    --glass-border-hover: rgba(201,168, 76, 0.35);
+    --glass-blur: blur(12px);
+    --glass-shadow: 0 6px 6px rgb(0 0 0 / 20%), 0 0 20px rgb(0 0 0 / 10%);
+    --glass-text-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 
 
     --font-heading: Arial;
@@ -38,7 +62,7 @@ html{
 
 
 body{
-    background-color: var(--color-bg);
+    background-image: var(--color-bg-linear6);
     color: var(--color-text);
     font-family: var(--font-body);
     min-height: 100vh;
@@ -48,3 +72,130 @@ a{
     color: var(--color-text);
     text-decoration: none;
 }
+
+.glass{
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    text-shadow: var(--glass-text-shadow);
+
+  
+}
+
+
+
+.glass::before, .glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+.glass::before{
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+  .glass::after {
+    box-shadow: inset 2px 2px 1px 0 rgb(255 255 255 / 50%), inset -1px -1px 1px 1px rgb(255 255 255 / 50%);
+  }
+
+
+
+/* ------------------------- HEADER & NAVIGATION ---------------------------------*/
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 10vh;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: var(--glass-blur);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 40vw;
+    max-width: 50vw;
+    list-style: none;
+    font-size: 1.4vw;
+    
+}
+
+nav ul a{
+    color: var(--color-white);
+    border-radius: 15px;
+    transition: all 250ms ease-in-out;
+    padding: 10px 15px;
+    letter-spacing: 0.04em;
+}
+
+nav ul a:hover{
+    color: var(--color-accent);
+    background-color: var(--color-surface-alt);
+
+}
+
+.active{
+    color: var(--color-accent-dark);
+}
+
+h1{
+    font-family: var(--font-heading);
+    text-align: center;
+    margin-top: 3vh;
+    font-size: 8Vh;
+}
+
+/* ----------------------------------- INDEX HTML -------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+ /* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 176px) { */
+ /* body {background-color: green;} */
+
+ 
+/* } */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { */
+ /* body {background-color: rgb(71, 17, 195);} */
+
+/* } */
+  
+
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { */
+ /* body {background-color: rgb(242, 118, 192);} */
+
+/* } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+ body {background-color: rgb(101, 217, 233);}
+  
+} */
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+ body {background-color: rgb(144, 111, 221);}
+  
+} */
