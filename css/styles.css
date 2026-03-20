@@ -70,7 +70,13 @@ body{
     background-image: var(--color-bg-linear9);
     color: var(--color-text);
     font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+main{
+    flex: 1;
 }
 
 a{
@@ -107,6 +113,7 @@ p {
     inset: 0;
     border-radius: inherit;
     box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255,0.5), inset -1px -1px 1px 1px rgb(255, 255, 255, 0.5);
+    pointer-events: none;
   }
 
 
@@ -158,7 +165,7 @@ nav ul a:hover{
 h1{
     text-align: center;
 
-    font-size: 8Vh;
+    font-size: 7Vh;
 }
 
 /* ----------------------------------- INDEX HTML -------------------------------------------- */
@@ -178,7 +185,7 @@ h1{
 .hero h2{
     grid-column: 1/1;
     grid-row: 2/3;
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
     width: 60%;
     margin: 0 auto;
@@ -218,11 +225,108 @@ h1{
 }
 
 .intro h2{
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
 }
 
 
+/* ----------------------------------- CONTACT HTML -------------------------------------------- */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 65%;
+    margin: 0 auto;
+    height: 60vh;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+
+.container h2{
+    grid-column: 1/1;
+    grid-row: 1/3;
+    font-size: 2vw;
+    text-align: center;
+    width: 60%;
+    margin: 25px auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 40px auto;
+    grid-column: 1/1;
+    grid-row: 2/3;
+
+}
+
+.container img{
+    grid-column: 2/2;
+    grid-row: 1/3;
+    min-width: 40%;
+    height: 100%;
+    margin: 10px auto;
+    border-radius: 30px;
+    box-shadow: var(--glass-shadow);
+}
+
+input{
+  
+  background: #f8f9fa;
+  padding: 10px;
+  padding-left: 20px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  margin: 5px 0;
+
+}
+
+textarea {
+  background: #f8f9fa;
+  padding: 15px 10px 15px 20px;
+  height: auto;
+  min-height: 100px;
+  resize: vertical;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border-radius: 20px;
+  border: none;
+  box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  margin: 5px 0;
+}
+
+input:focus, textarea:focus{
+  display: block;
+  border:none;
+  box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.9),
+              0 0 0 2px rgba(2, 239, 243, 0.2);
+}
+
+.container button{
+  margin-top: 20px;
+  background: linear-gradient(145deg, var(--color-accent), var(--color-accent-dark));
+  color: var(--color-white);
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-body);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 6px 6px 12px rgba(26, 35, 50, 0.15), 
+              -6px -6px 12px rgba(255, 255, 255, 0.7);
+  width: 50%;
+  letter-spacing: 0.5px;
+}
 
 
 /* FOOTER STYLING ALL PAGES */
