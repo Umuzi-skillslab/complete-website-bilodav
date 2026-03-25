@@ -418,8 +418,10 @@ input:focus, textarea:focus{
 
 .container button{
   margin-top: 20px;
-  background: linear-gradient(145deg, var(--color-accent), var(--color-accent-dark));
-  color: var(--color-white);
+  background: linear-gradient(145deg, var(--color-accent-dark), var(--color-accent) , var(--color-accent-dark));
+  background-position: right;
+  background-size: 200% 200%;
+  color: var(--color-bg);
   padding: 14px 32px;
   font-size: 16px;
   font-weight: var(--font-weight-semibold);
@@ -432,11 +434,12 @@ input:focus, textarea:focus{
               -6px -6px 12px rgba(255, 255, 255, 0.7);
   width: 50%;
   letter-spacing: 0.5px;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .container button:hover{
-    background: linear-gradient(-145deg, var(--color-accent-dark), var(--color-accent))
+    background-position: left;
+    transform: scaleY(1.1);
 }
 
 
