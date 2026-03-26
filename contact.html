@@ -24,7 +24,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul role="list">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
@@ -42,12 +42,52 @@
         <h2>Get In Touch</h2>
 
         <form>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
-          <input type="tel" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+          <!-- * required mark hidden for screen readers -->
+          <label for="name">
+            Name: <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Jhon Doe"
+            required
+            aria-required="true"
+            minlength="2"
+          />
 
-          <!-- Missing: labels, more input types, validation -->
+          <label for="email">
+            Email: <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="email@email.com"
+            required
+            aria-required="true"
+          />
+
+          <label for="phone"> Phone: </label>
+          <input type="tel" id="phone" placeholder="+27 82 000 000" />
+
+          <label for="project-type">
+            Project type:
+            <span aria-hidden="true" class="required-mark">*</span>
+          </label>
+          <select
+            id="project-type"
+            name="project-type"
+            required
+            aria-required="true"
+          >
+            <option value="" disabled selected>Query Type</option>
+            <option value="new website">New Website</option>
+            <option value="web maintanence">Web Maintanence</option>
+            <option value="web changes">Web Changes</option>
+            <option value="web app">Web Application</option>
+            <option value="e-commerce">e-commerce</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea placeholder="Message"></textarea>
 
           <button>Send</button>
         </form>

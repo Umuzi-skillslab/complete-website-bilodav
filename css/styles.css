@@ -79,6 +79,8 @@ body{
     min-height: 100vh;
 }
 
+
+
 main{
     flex: 1;
 }
@@ -125,11 +127,11 @@ p {
 /* ------------------------- HEADER & NAVIGATION ---------------------------------*/
 
 nav{
-    position: sticky;
+    position: sticky; 
+    
     top: 0;
     z-index: 100;
     height: 8.5vh;
-
     backdrop-filter: var(--glass-blur);
     display: flex;
     justify-content: flex-end;
@@ -378,14 +380,13 @@ form{
     grid-column: 2/2;
     grid-row: 1/3;
     min-width: 40%;
-    height: 100%;
+    height: 90%;
     margin: 10px auto;
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
 }
 
-input{
-  
+input, select{
   background: #e0ddee;
   padding: 10px;
   padding-left: 20px;
@@ -396,6 +397,14 @@ input{
   box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
               inset -4px -4px 8px rgba(255, 255, 255, 0.9);
   margin: 5px 0;
+
+}
+
+select {
+    cursor: pointer;
+    padding: 0 15px;
+    padding-right: 20px;
+    color: var(--color-text);
 
 }
 
@@ -414,7 +423,7 @@ textarea {
   margin: 5px 0;
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus, select:focus{
   border:none;
   outline: none;
   box-shadow: inset 4px 4px 6px rgba(26, 35, 50, 0.06), 
