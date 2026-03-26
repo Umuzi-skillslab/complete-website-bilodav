@@ -77,6 +77,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 301px;
 }
 
 
@@ -302,7 +303,8 @@ p {
     flex-direction: column;
     padding: 20px;
     border-radius: 20px;
-    min-width:250px;
+    min-width: 300px;
+    min-height: 400px;
     max-width: 30%;
     transition: all 250ms ease-in-out;
 }
@@ -317,7 +319,7 @@ p {
 }
 
 .project-card h2{
-    font-size: 1.9vw;
+    font-size: 1.8rem;
     padding-bottom: 20px;
     transition: all 250ms ease-in-out;
 
