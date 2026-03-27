@@ -80,6 +80,88 @@ body{
     min-width: 301px;
 }
 
+.orb {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    z-index: -5000;
+    background: radial-gradient(circle, #00c9ff 0%, #00c9ff 60%, transparent 90%);
+    box-shadow: 
+            0 0 20px 20px #00c9ff, 
+            0 0 60px 40px  #00c9ff,
+            0 0 100px 60px  #55a6bd;
+
+    filter: blur(10px);
+    animation: orb-mover-1 35s alternate-reverse linear infinite  ;
+}
+
+
+.orb:nth-of-type(1) {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    z-index: -5000;
+    background: radial-gradient(circle, #e5b421 0%, #e5b421 60%, transparent 90%);
+    box-shadow: 
+            0 0 20px 20px #e5b421, 
+            0 0 60px 40px  #e5b421,
+            0 0 100px 60px  #ffc109;
+
+    filter: blur(6px);
+    animation: orb-mover-2 60s alternate-reverse linear infinite  ;
+}
+
+.orb:nth-of-type(2) {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    z-index: -5000;
+    background: radial-gradient(circle, #e5b421 0%, #e5b421 60%, transparent 90%);
+    box-shadow: 
+            0 0 20px 20px #e5b421, 
+            0 0 60px 40px  #e5b421,
+            0 0 100px 60px  #ffc109;
+
+    filter: blur(6px);
+    animation: orb-mover-3 30s alternate-reverse linear infinite  ;
+}
+
+@keyframes orb-mover-1 {
+    0% { translate: 10vw 5vh;}
+    15% { translate: 40vw 20vh;}
+    30% { translate: 15vw 10vh;}
+    45% { translate: 20vw 45vh;}
+    60% { translate: 30vw 60vh;}
+    75% { translate: 35vw 70vh;}
+    90% { translate: 45vw 85vh;}
+    100% { translate: 50vw 95vh;}
+}
+
+@keyframes orb-mover-2 {
+    0% { translate: 80vw 15vh;}
+    15% { translate: 50vw 5vh;}
+    30% { translate: 20vw 30vh;}
+    45% { translate: 65vw 55vh;}
+    60% { translate: 10vw 75vh;}
+    75% { translate: 45vw 60vh;}
+    90% { translate: 75vw 85vh;}
+    100% { translate: 15vw 95vh;}
+}
+
+@keyframes orb-mover-3 {
+    0% { translate: 50vw 50vh;}
+    15% { translate: 15vw 15vh;}
+    30% { translate: 85vw 35vh;}
+    45% { translate: 30vw 70vh;}
+    60% { translate: 75vw 20vh;}
+    75% { translate: 5vw 45vh;}
+    90% { translate: 60vw 65vh;}
+    100% { translate: 90vw 10vh;}
+}
+
 
 /* Using flex:1 so that <main> always fills out the entire space left over and footer is pushed to end */
 main{
@@ -286,7 +368,7 @@ p {
 }
 
 /* -------------------------------------PROJECTS HTML ----------------------------------------------------- */
-
+/* Flex wrap and min-width handle the responsiveness of my project cards, so no media queries needed */
 .projects{
     display: flex;
     width: 80%;
@@ -340,12 +422,15 @@ p {
 
 .project-card .hovered{
     position: absolute;
-    left: 20;
+    left: 20px;
     opacity: 0;
     visibility: hidden;
     transition: all 450ms ease-in-out;
 
 }
+/* Position absolute used so that the .hovered element can occupy the same space in the document flow as .static for the transition effect */
+
+
 .project-card:hover .static{
 
     opacity: 1;
@@ -361,8 +446,6 @@ p {
     opacity: 0;
     visibility: hidden;
 }
-
-
 
 
 .project-card img{
@@ -385,13 +468,18 @@ p {
 
 /* ----------------------------------- CONTACT HTML -------------------------------------------- */
 
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width:300px) {
+
+
+ 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
-    width: 65%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    width: 80%;
     margin: 0  auto 2vh;
-    min-height: 60vh;
+    height: auto;
     border-radius: 30px;
     margin-top: 25px;
 }
@@ -399,7 +487,7 @@ p {
 .container h2{
     grid-column: 1/1;
     grid-row: 1/2;
-    font-size: 2vw;
+    font-size: 2rem;
     text-align: center;
     width: 60%;
     margin: 10px auto;
@@ -412,13 +500,13 @@ form{
     align-self: center;
     justify-self: center;
     grid-column: 1/1;
-    grid-row: 2/3;
+    grid-row: 2/2;
 
 }
 
 .container img{
-    grid-column: 2/2;
-    grid-row: 1/4;
+    grid-column: 1/1;
+    grid-row: 3/4;
     min-width: 40%;
     max-width: 90%;
     height: 90%;
@@ -427,6 +515,7 @@ form{
     box-shadow: var(--glass-shadow);
     align-self: center;
     justify-self: center;
+    display: none;
 }
 
 label{
@@ -460,7 +549,7 @@ textarea {
   background: #e0ddee;
   padding: 15px 10px 15px 20px;
   height: auto;
-  min-height: 100px;
+  min-height: 70px;
   resize: vertical;
   font-size: 14px;
   font-family: var(--font-body);
@@ -507,6 +596,50 @@ input:focus, textarea:focus, select:focus{
 
 .required-mark{
     color: var(--color-error);
+}
+
+
+
+
+
+ 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+ .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    width: 75%;
+    min-height: 60vh;
+ }
+
+ .container h2{
+    grid-column: 1/1;
+    grid-row: 1/2;
+ }
+
+ form{
+    grid-column: 1/1;
+    grid-row: 2/3;
+ }
+
+ .container img{
+    grid-column: 2/2;
+    grid-row: 1/4;
+    display: block;
+ }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ .container{
+    width: 65%;
+ }
+
 }
 
 
