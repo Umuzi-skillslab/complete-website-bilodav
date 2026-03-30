@@ -367,6 +367,176 @@ p {
     text-align: center;
 }
 
+/* --------------------------------------ABOUT.HTML ------------------------------------------------------- */
+
+.about-main{
+    width: 75%;
+    height: 65vh;
+    margin: 30px auto;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-content: center;
+    gap: 10px;
+}
+
+.about-main h2{
+    text-align: center;
+    font-size:2.2rem;
+    margin: 1vh;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-end;
+}
+
+.about-main p{
+    text-align: center;
+    width: 70%;
+    font-size:1rem;
+    padding-top: 0.5vh;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self:  center;
+}
+
+.about-main img{
+    grid-column: 2/3;
+    grid-row: 1/7;
+    width: 60%;
+    object-fit: cover;
+    border-radius: 20px;
+    justify-self: center;
+    align-self: center;
+}
+
+.about-skills{
+    width: 85%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+.about-skills h2{
+    text-align: center;
+    font-size:2.2rem;
+    margin: 1vh;
+}
+
+#table{
+    margin: 50px auto;
+    table-layout: fixed;
+    width: 80%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: var(--color-border) solid 1px;
+    border-radius: 30px;
+}
+
+th{
+    padding: 30px 0 10px 0;
+    font-size: 1.8rem;
+}
+
+
+td{
+    padding: 10px 30px;
+}
+
+
+.table-card{
+    position: relative;
+    height: 140px;
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    transition: all ease-in-out 250ms;
+}
+
+.table-card:hover{
+    cursor: pointer;
+    fill:#12fff7;
+    box-shadow: inset -4px -4px 12px rgba(26, 35, 50, 0.06),
+                inset 1px 1px 8px rgba(122, 244, 255, 0.9),
+                inset 4px 4px 12px rgba(255, 255, 255, 0.9),
+                inset -4px -4px 8px rgba(122, 244, 255, 0.9);
+
+}
+
+/* Used a div here as my positioning context as using position:relative on the td elements are not providing reliable results in getting my images to change on the same position */
+
+.inner-table-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#table img{
+    height: 80px;
+    display: block;
+    margin: 0 auto ;
+
+}
+
+#table .table-card .icon-hovered{
+    height: 60px;
+}
+
+.table-card .icon-static{
+    opacity: 1;
+    visibility: visible;
+    transition: all 50ms ease-in-out;
+}
+
+.table-card .icon-hovered{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 50ms ease-in-out;
+}
+/* Position absolute used so that the .hovered element can occupy the same space in the document flow as .static for the transition effect */
+
+
+
+
+.table-card:hover .icon-hovered{
+    opacity: 1;
+    visibility: visible;
+}
+
+.table-card:hover .icon-static{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+#table span {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
 /* -------------------------------------PROJECTS HTML ----------------------------------------------------- */
 /* Flex wrap and min-width handle the responsiveness of my project cards, so no media queries needed */
 .projects{
