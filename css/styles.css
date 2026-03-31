@@ -359,7 +359,7 @@ p {
 
  .hero img {
     grid-row: 2/3;
-    width: 60%;
+    width: 64%;
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
     transition: all 200ms ease-in-out;
@@ -369,8 +369,8 @@ p {
 
  .hero img:hover{
     transform: rotate(10deg) translateY(-25px);
-    /* transform: translateY(-10px); */
     cursor: pointer;
+    z-index: -5;
  }
 
 
@@ -742,7 +742,7 @@ p {
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     width: 80%;
     margin: 0  auto 2vh;
     height: auto;
@@ -751,8 +751,17 @@ p {
 }
 
 .container h2{
-    grid-column: 1/1;
+    grid-column: 1/2;
     grid-row: 1/2;
+    font-size: 2rem;
+    text-align: center;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.container h2:last-of-type{
+    grid-column: 1/2;
+    grid-row: 3/4;
     font-size: 2rem;
     text-align: center;
     width: 60%;
@@ -765,17 +774,17 @@ form{
     width: 70%;
     align-self: center;
     justify-self: center;
-    grid-column: 1/1;
+    grid-column: 1/2;
     grid-row: 2/2;
 
 }
 
 .container img{
-    grid-column: 1/1;
+    grid-column: 1/2;
     grid-row: 3/4;
     min-width: 40%;
     max-width: 90%;
-    height: 90%;
+    height: 95%;
     /* margin: 20px auto; */
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
@@ -850,7 +859,7 @@ input:focus, textarea:focus, select:focus{
   transition: all var(--transition-base);
   box-shadow: 6px 6px 12px rgba(26, 35, 50, 0.15), 
               -6px -6px 12px rgba(255, 255, 255, 0.7);
-  width: 50%;
+  width: 100%;
   letter-spacing: 0.5px;
   transition: all 250ms ease-in-out;
 }
@@ -864,31 +873,70 @@ input:focus, textarea:focus, select:focus{
     color: var(--color-error);
 }
 
+address {
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+}
 
+address li {
+    padding: 0;
+    list-style: none;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 8px rgba(26, 35, 50, 0.06), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+    margin: 22px 0;
+    background: linear-gradient(145deg, #e2d1c3b4, #fdfcfb9e , #e2d1c3b4);
+    background-position: right;
+    background-size: 150% 150%;
+    transition: all 200ms ease-in-out;
+}
 
+address li:not(:first-of-type){
+    margin-top: 30px;
+}
 
+address li:hover{
+    background-position: left;
+}
 
- 
+address li a {
+    display: block;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px;
+    text-align: center;
+}
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
  .container{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
-    width: 75%;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    width: 85%;
     min-height: 60vh;
  }
 
  .container h2{
+    margin-top: 20px;
     grid-column: 1/1;
+    grid-row: 1/2;
+ }
+
+  .container h2:last-of-type{
+    margin-top: 20px;
+    grid-column: 3/4;
     grid-row: 1/2;
  }
 
  form{
     grid-column: 1/1;
     grid-row: 2/3;
+    margin-top: -50px;
  }
 
  .container img{
@@ -897,17 +945,22 @@ input:focus, textarea:focus, select:focus{
     display: block;
  }
 
+ address{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: flex-start;
+ }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
  .container{
-    width: 65%;
+    width: 85%;
  }
 
 }
-
 
 
 /* FOOTER STYLING ALL PAGES */
