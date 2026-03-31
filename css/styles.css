@@ -381,14 +381,22 @@ p {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 18vh;
+    min-height: 18vh;
     margin: 10px auto;
     border-radius: 30px;
+
  }
 
  .intro h2{
-    font-size: 2.5vw;
+    font-size: 2rem;
     text-align: center;
+    margin: 20px 0;
+ }
+
+ .intro p{
+    width: 85%;
+    margin-bottom: 25px;
+    text-align:center;
  }
  
 }
@@ -764,7 +772,7 @@ p {
     grid-row: 3/4;
     font-size: 2rem;
     text-align: center;
-    width: 60%;
+    width: 70%;
     margin: 10px auto;
 }
 
@@ -929,6 +937,7 @@ address li a {
 
   .container h2:last-of-type{
     margin-top: 20px;
+    width: 80%;
     grid-column: 3/4;
     grid-row: 1/2;
  }
@@ -936,7 +945,7 @@ address li a {
  form{
     grid-column: 1/1;
     grid-row: 2/3;
-    margin-top: -50px;
+    margin-top: 10px;
  }
 
  .container img{
