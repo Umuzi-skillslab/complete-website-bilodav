@@ -3,7 +3,7 @@
 
 # Portfolio Website Overview
 
-This is a four-page portfolio website template. The website showcases a home page where a short intro is given. An about page where more in depth information is given about the person. A Projects Page that Showcases the different past projects of the person. Lastly a contact page that allows a user to contact the profile owner easily via a form or contact buttons. The website is optomized for all screen sizes and is fully responsive across multiple devices.
+This is a four-page portfolio website template built for the Umuzi Capstone Project. The website features a home page with a short introduction, an about page with detailed background and skills information, a projects page showcasing past work, and a contact page allowing visitors to reach the person via a responsive form or direct links. The website is also fully responsive across all screen sizes
 
 The project began from an incomplete, error-filled starter codebase and was rebuilt into a fully functional, accessible, responsive, and professionally styled website.
 
