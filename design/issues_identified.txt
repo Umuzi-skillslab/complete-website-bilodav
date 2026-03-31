@@ -1,5 +1,6 @@
 THESE ARE THE ISSUES I IDENTIFIED IN THE STARTER CODE
-Portfolio Website
+Portfolio Website 
+Raphael Davids | Umuzi Capstone Project
 =====================================================
 
 GENERAL ( Affects all 4 HTML files)
@@ -51,12 +52,20 @@ CSS (styles.css)
 30. There was no css folder in the starter code even though listed in project brief.
 31. There was no style.css in the starter code even though listed in project brief.
 32. All the elements are therefore unstyled.
+33. The starter CSS uses only 2-3 selector types, while the brief requires a minimum of 5.
+34. No pseudo-classes are used (e.g :hover, :focus) anywhere in the starter CSS.
+35. No combination or descendant selectors are used.
+36. The .hero section uses lightblue as a background with no contrast check, causing a color contrast accessibility failure.
+37. The footer uses text-align:left instead of text-align:center.
+38. The font-family: Arial is declared without a fallback font.
+39. No table styling is present in the stylesheet.
+40. No form styling is present in the stylesheet.
 
 
 images (folder)
 ----------------
-33. There was no images folder in the starter code even though listed in the project brief.
-34. No images are provided.
+41. There was no images folder in the starter code even though listed in the project brief.
+42. No images are provided.
 
 
 
