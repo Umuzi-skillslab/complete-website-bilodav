@@ -10,7 +10,7 @@ STYLESHEET FOR ALL PAGES
 
 
 /* ----------------------CSS ROOT PROPERTIES -----------------------------------*/
-/* Root properties allows me to have a central place for basic styles like fonts and colors so that its easier to update my code and reduce reppetative code  */
+/* Root properties allows me to have a central place for basic styles like fonts and colors so that its easier to update my code and reduce repetitive code  */
 
 :root {
     --color-bg: #e2fefe;
@@ -78,7 +78,7 @@ STYLESHEET FOR ALL PAGES
     padding: 0;
 }
 
-/* Scroll-Bw=ehaviour added for smooth anchor link navigation  */
+/* Scroll-Behaviour added for smooth anchor link navigation  */
 html{
     scroll-behavior: smooth;
     font-size: 16px;
