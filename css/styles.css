@@ -418,7 +418,7 @@ p {
  }
 }
 
-/* Large devices (tablets, 992px and up) - media query - for good responsiveness  */
+/* Large devices (laptops, 992px and up) - media query - for good responsiveness  */
 @media (min-width: 992px) {
  .hero{
     display: grid;
