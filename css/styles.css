@@ -765,7 +765,6 @@ form{
     min-width: 40%;
     max-width: 90%;
     height: 95%;
-    /* margin: 20px auto; */
     border-radius: 30px;
     box-shadow: var(--glass-shadow);
     align-self: center;
