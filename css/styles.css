@@ -827,7 +827,6 @@ input:focus, textarea:focus, select:focus{
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: all var(--transition-base);
   box-shadow: 6px 6px 12px rgba(26, 35, 50, 0.15), 
               -6px -6px 12px rgba(255, 255, 255, 0.7);
   width: 100%;
@@ -863,11 +862,34 @@ address li {
     transition: all 200ms ease-in-out;
 }
 
+address li span {
+    padding-right: 5px;
+}
+
+address li svg {
+    width: 30px;
+    vertical-align: middle;
+
+}
+
 address li:not(:first-of-type){
     margin-top: 30px;
 }
 
 address li:hover{
+    background-position: left;
+    fill: var(--color-accent);
+    box-shadow: inset -4px -4px 8px rgba(26, 35, 50, 0.06), 
+                inset 4px 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+address li:active{
+    
+    fill: var(--color-accent-dark);
+    box-shadow: inset -4px -4px 8px rgba(26, 35, 50, 0.06), 
+                inset 4px 4px 8px rgba(255, 255, 255, 0.9);
+    transform: translate(1px, 1.5px) scale(0.98);
+    transition: all 60ms ease-out;
     background-position: left;
 }
 
@@ -879,6 +901,11 @@ address li a {
     padding: 15px 10px;
     text-align: center;
 }
+
+address li a[href*="raphael.davids"] {
+    font-size: 0.8rem;
+}
+
 
 }
 
