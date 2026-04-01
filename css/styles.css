@@ -391,7 +391,7 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     width: 65%;
-    height: 55vh;
+    height: 65vh;
  }
 
 
@@ -406,8 +406,8 @@ p {
     grid-column: 1/1;
     grid-row: 3/4;
     text-align: center;
-    padding: 20px;
-    width: 65%;
+    padding: 5px 0 20px 0;
+    width: 75%;
  }
 
  .hero img {
@@ -416,6 +416,18 @@ p {
     min-width: 220px;
     max-width: 90%;
  }
+}
+
+/* Large devices (tablets, 992px and up) - media query - for good responsiveness  */
+@media (min-width: 992px) {
+ .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 65%;
+    height: 55vh;
+ }
+
 }
   
 
