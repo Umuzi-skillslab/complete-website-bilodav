@@ -109,6 +109,16 @@ I defined custom CSS properties in `:root` for colors, fonts, gradients, and gla
 
 ![Navigation](./screenshots/navigation.png)
 
+### Before and After Comparison of contact.html
+
+#### Before
+
+![Previous Contacts Page](./screenshots/previouscontactpage.png)
+
+#### After
+
+![Contacts Page](./screenshots/contactpage.png)
+
 ## Reflection
 
 The most challenging part of this project was working from a broken codebase rather than starting fresh. Identifying every error required careful reading of each file line by line. Learning which semantic HTML elements were good replacements for the standard `<div>` elements that were given, taught me how to make the HTML structure genuinely more meaningful. The CSS rebuild taught me the value of CSS custom properties for maintaining consistency across a large stylesheet. Implementing the glass morphism style with `backdrop-filter` and `::after` pseudo-elements required solving a pointer-events issue where the overlay was blocking clicks on child elements., which I had to research and then learned it can be resolved with `pointer-events: none`. Responsive design required careful thinking about which layouts needed explicit media queries and which could rely on flexbox `flex-wrap` to handle themselves naturally.
