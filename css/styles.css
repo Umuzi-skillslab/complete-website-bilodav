@@ -66,6 +66,21 @@ body {
   min-height: 100vh;
   min-width: 300px;
 }
+
+/* Added a skip to content link and this is the styling to keep it out of sight unless tabbed into it so that it will appear for better accessibility  */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 8px 16px;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Using a container with position fixed so that the orbs can move across the entire screen width and height and also overflow: hidden is used to prevent the orbs going off the screen and making the page extend further than what is intended. */
 .orb-container {
   position: fixed;
