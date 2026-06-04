@@ -13,13 +13,14 @@ STYLESHEET FOR ALL PAGES
 
 :root {
   --color-bg: #e2fefe;
-  --color-bg-linear: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  --color-bg-linear: linear-gradient(135deg, #fdfcfb 0%, #f1e9e2 100%);
 
   --color-surface: #defcfc;
   --color-surface-alt: #79d1e2;
   --color-border: #22455f;
   --color-text: #16293d;
   --color-text-light: #9a9590;
+  --color-link-active: #ad1010;
   --color-accent: #4eb6af;
   --color-accent-dark: #23646d;
   --color-white: #f5f2eb;
@@ -290,7 +291,7 @@ p {
     display: inline-block;
     color: var(--color-accent-dark);
     border-radius: 15px;
-    transition: all 250ms ease-in-out;
+    transition: all 225ms ease-in-out;
     padding: 10px 15px;
     letter-spacing: 0.04em;
     font-family: var(--font-mono);
@@ -298,7 +299,7 @@ p {
 
   nav ul a:hover {
     color: var(--color-white);
-    background-color: var(--color-surface-alt);
+    background-color: #318083;
   }
 
   nav ul a:active {
@@ -312,7 +313,7 @@ p {
   }
 
   .active {
-    color: var(--color-accent);
+    color: var(--color-link-active);
   }
 
   h1 {
@@ -563,7 +564,7 @@ p {
       inset 4px 4px 8px rgba(26, 35, 50, 0.06),
       inset -4px -4px 8px rgba(255, 255, 255, 0.9);
     padding: 10px;
-    transition: all ease-in-out 250ms;
+    transition: all ease-in-out 175ms;
   }
 
   .table-card:hover {
@@ -571,7 +572,7 @@ p {
     fill: #12fff7;
     box-shadow:
       inset -4px -4px 12px rgba(26, 35, 50, 0.06),
-      inset 1px 1px 8px rgba(122, 244, 255, 0.9),
+      inset 1px 1px 8px rgb(28, 123, 125),
       inset 4px 4px 12px rgba(255, 255, 255, 0.9),
       inset -4px -4px 8px rgba(122, 244, 255, 0.9);
   }
@@ -846,7 +847,7 @@ p {
     box-shadow:
       inset 4px 4px 6px rgba(26, 35, 50, 0.06),
       inset -4px -4px 6px rgba(255, 255, 255, 0.9),
-      0 0 0 4px rgba(2, 239, 243, 0.2);
+      0 0 0 2px rgb(28, 123, 125);
   }
 
   .contact button {
@@ -936,7 +937,7 @@ p {
   }
 
   address li:hover svg {
-    fill: var(--color-accent);
+    fill: #318083;
   }
 
   address li:active {
@@ -1030,7 +1031,6 @@ footer {
 
 footer p,
 footer a {
-  width: 20%;
   font-weight: 600;
   text-align: center;
   vertical-align: middle;
@@ -1041,7 +1041,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--color-accent-dark);
+  color: #ad1010;
   text-decoration: underline;
 }
 

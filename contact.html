@@ -240,7 +240,7 @@
         const email = document.getElementById("email").value.trim();
         const projectType = document.getElementById("project-type").value;
 
-        // Check if all fields are currently filled out, it is also already handled by the required attributes
+        // Check if all fields are currently filled out, it is also already handled by the required attributes but good to still ensure it has been filled out.
         if (!name || !email || !projectType) {
           feedback.textContent = "Please fill in all required fields";
           feedback.style.color = "red";
