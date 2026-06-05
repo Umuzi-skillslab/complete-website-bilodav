@@ -1,30 +1,105 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>My Projects</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website portfolio template - Portfolio of web development and design projects by Raphael Davids"
+    />
+    <meta name="author" content="Raphael Davids" />
+
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="Raphael Davids | Projects" />
+    <meta
+      property="og:description"
+      content="Selected web development and design work by Raphael Davids"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Title and style links -->
+    <title>Projects | Raphael Davids</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- These divs are used only for background animation styling of orbs, only three are used to keep inline with the assignment requirements  -->
+    <div class="orb-container" aria-hidden="true">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
+      <div class="orb" aria-hidden="true"></div>
     </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+    <header>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <!-- prettier-ignore -->
+          <li>
+            <a href="./projects.html" class="active" aria-current="page">Projects</a>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>My Projects</h1>
+    </header>
+    <main id="main-content">
+      <section class="projects">
+        <article class="project-card glass">
+          <h2 aria-label="Project 1 - mymedpage.com">
+            <span class="static">Project 1</span>
+            <span class="hovered">mymedpage.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/medical-website.png"
+              alt="an image of my medical website"
+            />
+            <figcaption>
+              A responsive website built with HTML and CSS.
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="project-card glass">
+          <h2 aria-label="Project 2 - myonlinestore.com">
+            <span class="static">Project 2</span>
+            <span class="hovered">myonlinestore.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/e-commerce.png"
+              alt="an image of my ecommerce website"
+            />
+            <figcaption>An e-commerce site with modern design.</figcaption>
+          </figure>
+        </article>
+
+        <article class="project-card glass">
+          <h2 aria-label="Project 3 - myblogsite.com">
+            <span class="static">Project 3</span>
+            <span class="hovered">myblogsite.com</span>
+          </h2>
+          <figure>
+            <img
+              src="images/blog-website.png"
+              alt="an image of my blog website"
+            />
+            <figcaption>A blog site with modern design.</figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Raphael Davids &copy; 2026 - Umuzi Capstone Project</p>
+      <!-- Prettier ignore -->
+      <a href="mailto:raphael.davids@umuzi.org">
+        Contact me at raphael.davids@umuzi.org
+      </a>
+      <img src="./images/signature.png" alt="A signature of Raphael Davids" />
+    </footer>
+  </body>
 </html>
